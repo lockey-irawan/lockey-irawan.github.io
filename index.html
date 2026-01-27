@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer & Researcher Profile | AI & Immersive Technoloy</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        indigo: {
+                            950: '#1e1b4b', // Dominant Background
+                        },
+                        violet: {
+                            500: '#8b5cf6', // Primary Accent
+                        },
+                        fuchsia: {
+                            400: '#e879f9', // Glow/Highlight
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(30, 27, 75, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 antialiased selection:bg-fuchsia-400 selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-indigo-800/50 bg-slate-900/80 backdrop-blur-md">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-xl font-bold whitespace-nowrap text-white">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">LOIR</span>
+                </span>
+            </a>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <li><a href="#home" class="block py-2 px-3 text-white bg-violet-600 rounded md:bg-transparent md:text-violet-400 md:p-0" aria-current="page">Home</a></li>
+                    <li><a href="#research" class="block py-2 px-3 text-slate-300 hover:text-white md:hover:text-fuchsia-400 md:p-0 transition">Research</a></li>
+                    <li><a href="#teaching" class="block py-2 px-3 text-slate-300 hover:text-white md:hover:text-fuchsia-400 md:p-0 transition">Teaching</a></li>
+                    <li><a href="#portfolio" class="block py-2 px-3 text-slate-300 hover:text-white md:hover:text-fuchsia-400 md:p-0 transition">Portfolio</a></li>
+                    <li><a href="#contact" class="block py-2 px-3 text-slate-300 hover:text-white md:hover:text-fuchsia-400 md:p-0 transition">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-900 pt-20">
+        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="mr-auto place-self-center lg:col-span-7">
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
+                    Exploring the Convergence of <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">AI & Immersive Reality</span>
+                </h1>
+                <p class="max-w-2xl mb-6 font-light text-slate-400 lg:mb-8 md:text-lg lg:text-xl">
+                    Lecturer & Researcher at Universitas Ma Chung. Founder of <a href="https://lockey-irawan.github.io/metalabs/" target="_blank" class="font-semibold text-fuchsia-400 hover:text-fuchsia-300 underline decoration-fuchsia-500/30 underline-offset-4 transition">MetaLabs</a>, focusing on developing intelligent solutions through Artificial Intelligence and Extended Reality (XR) experiences.
+                </p>
+                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-4">
+                    <a href="#research" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-violet-600 hover:bg-violet-700 focus:ring-4 focus:ring-violet-900 transition shadow-lg shadow-violet-500/30">
+                        View Research
+                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-slate-600 hover:bg-slate-800 focus:ring-4 focus:ring-slate-700 transition glass-card">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex relative">
+                <div class="absolute inset-0 bg-violet-500 blur-[100px] opacity-20 rounded-full"></div>
+                <div class="relative w-80 h-80 bg-slate-800 rounded-full flex items-center justify-center border-2 border-indigo-500/50 shadow-2xl overflow-hidden mx-auto">
+                    <img src="profile.png" alt="Profile Photo" class="object-cover w-full h-full">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="py-20 bg-slate-900">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <h2 class="mb-4 text-3xl font-bold tracking-tight text-white text-center">Research Focus & Publications</h2>
+            <p class="mb-12 text-slate-400 text-center max-w-2xl mx-auto">Exploring technological frontiers through applied and academic research.</p>
+
+            <div class="glass-card p-8 rounded-2xl border border-fuchsia-500/30 relative overflow-hidden group mb-16 hover:border-fuchsia-500/60 transition duration-500">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-fuchsia-600 blur-[80px] opacity-10 group-hover:opacity-20 transition duration-500"></div>
+                
+                <div class="relative z-10 md:flex md:items-center md:justify-between gap-8">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-fuchsia-900/50 text-fuchsia-300 text-xs font-semibold px-2.5 py-0.5 rounded border border-fuchsia-800">Research Center</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-3">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">MetaLabs</span> Ma Chung
+                        </h3>
+                        <p class="text-slate-300 mb-4 leading-relaxed">
+                            A research laboratory I founded to facilitate collaboration between students and faculty in the development of Immersive Technologies (AR/VR/XR) and Artificial Intelligence. Visit the lab's website to explore project demos and team profiles.
+                        </p>
+                    </div>
+                    
+                    <div class="flex-shrink-0">
+                        <a href="https://lockey-irawan.github.io/metalabs/" target="_blank" class="inline-flex items-center justify-center px-6 py-4 text-base font-bold text-white transition-all bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-xl hover:shadow-[0_0_20px_rgba(192,38,211,0.5)] hover:scale-105 focus:ring-4 focus:ring-fuchsia-900">
+                            Visit Lab Website
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid gap-8 mb-12 lg:grid-cols-3">
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 mb-4 rounded-lg bg-violet-900/50 flex items-center justify-center text-violet-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-white">Augmented Reality (AR)</h3>
+                    <p class="text-slate-400">Developing AR applications for interactive navigation and immersive education.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 mb-4 rounded-lg bg-fuchsia-900/50 flex items-center justify-center text-fuchsia-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-white">Data Science</h3>
+                    <p class="text-slate-400">Data analysis and implementation of Python algorithms for advanced data transformation.</p>
+                </div>
+                 <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 mb-4 rounded-lg bg-indigo-900/50 flex items-center justify-center text-indigo-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-white">Education Tech</h3>
+                    <p class="text-slate-400">Innovating learning methodologies using the latest immersive technologies.</p>
+                </div>
+            </div>
+
+            <div class="bg-indigo-950/30 rounded-xl p-8 border border-indigo-900">
+                <h3 class="text-xl font-bold text-white mb-6">Selected Publications</h3>
+                <ul class="space-y-4">
+                    <li class="border-b border-indigo-900 pb-4">
+                        <a href="#" class="text-lg font-semibold text-violet-400 hover:text-fuchsia-400 transition">[International Journal Title]</a>
+                        <p class="text-sm text-slate-500 mt-1">Published in: IEEE/Sinta 2, 2025</p>
+                    </li>
+                    <li class="border-b border-indigo-900 pb-4">
+                        <a href="#" class="text-lg font-semibold text-violet-400 hover:text-fuchsia-400 transition">[Conference Proceeding Title]</a>
+                        <p class="text-sm text-slate-500 mt-1">National Symposium on Information Technology, 2024</p>
+                    </li>
+                </ul>
+                <div class="mt-6">
+                    <a href="https://scholar.google.com/citations?user=JqmefJUAAAAJ&hl=en" target="_blank" class="text-sm text-slate-400 hover:text-white flex items-center gap-2">
+                        View Google Scholar Profile 
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teaching" class="py-20 bg-gradient-to-b from-slate-900 to-indigo-950">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <h2 class="mb-4 text-3xl font-bold tracking-tight text-white">Teaching & Course Materials</h2>
+            <div class="flex justify-between items-end mb-8">
+                <p class="text-slate-400">Even Semester 2025/2026</p>
+                <span class="px-3 py-1 text-xs font-semibold tracking-wide text-fuchsia-300 bg-fuchsia-900/30 rounded-full border border-fuchsia-800">Updated: Jan 2026</span>
+            </div>
+
+            <div class="overflow-x-auto rounded-lg border border-indigo-800 mb-12">
+                <table class="w-full text-sm text-left text-slate-400">
+                    <thead class="text-xs text-white uppercase bg-indigo-900/50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">Day & Time</th>
+                            <th scope="col" class="px-6 py-3">Course</th>
+                            <th scope="col" class="px-6 py-3">Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-slate-900 border-b border-indigo-900 hover:bg-indigo-900/20">
+                            <td class="px-6 py-4">Monday, 00:00 - 00:00</td>
+                            <td class="px-6 py-4 font-medium text-white">Data Structure</td>
+                            <td class="px-6 py-4">Room A</td>
+                        </tr>
+                        <tr class="bg-slate-900 border-b border-indigo-900 hover:bg-indigo-900/20">
+                            <td class="px-6 py-4">Tuesday, 00:00 - 00:00</td>
+                            <td class="px-6 py-4 font-medium text-white">Web Programming</td>
+                            <td class="px-6 py-4">Room A</td>
+                        </tr>
+                        <tr class="bg-slate-900 border-b border-indigo-900 hover:bg-indigo-900/20">
+                            <td class="px-6 py-4">Wednesday, 00:00 - 00:00</td>
+                            <td class="px-6 py-4 font-medium text-white">Human and Computer Interactions</td>
+                            <td class="px-6 py-4">Room A</td>
+                        </tr>
+                        <tr class="bg-slate-900 border-b border-indigo-900 hover:bg-indigo-900/20">
+                            <td class="px-6 py-4">Thursday, 00:00 - 00:00</td>
+                            <td class="px-6 py-4 font-medium text-white">Database</td>
+                            <td class="px-6 py-4">Room A</td>
+                        </tr>
+                        <tr class="bg-slate-900 border-b border-indigo-900 hover:bg-indigo-900/20">
+                            <td class="px-6 py-4">Friday, 00:00 - 00:00</td>
+                            <td class="px-6 py-4 font-medium text-white">Extended Reality Design</td>
+                            <td class="px-6 py-4">Room A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-bold text-white mb-6">Course Resources</h3>
+            <div class="grid gap-6 md:grid-cols-2">
+                <div class="glass-card p-6 rounded-xl border-l-4 border-l-violet-500">
+                    <h4 class="text-2xl font-bold text-white mb-2">Data Structure</h4>
+                    <p class="text-slate-400 mb-4 text-sm">Fundamentals of syntax, array data structures, functions, and basic data processing.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Arraylist</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Linkedlist</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Stack</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Queue</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Binary Tree</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="datastructure.html" class="flex-1 text-center py-2 px-4 rounded border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white transition text-sm">Syllabus (RPS)</a>
+                        <a href="#" class="flex-1 text-center py-2 px-4 rounded bg-violet-700 text-white hover:bg-violet-600 transition text-sm">Course Modules</a>
+                    </div>
+                </div>
+                 <div class="glass-card p-6 rounded-xl border-l-4 border-l-fuchsia-500">
+                    <h4 class="text-2xl font-bold text-white mb-2">Web Programming</h4>
+                    <p class="text-slate-400 mb-4 text-sm">Development of AR-based applications using Unity and Vuforia for mobile devices.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">HTML</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">CSS</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Javascript</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Bootstrap</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">PHP</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Maria DB</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="webprogramming.html" class="flex-1 text-center py-2 px-4 rounded border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white transition text-sm">Syllabus (RPS)</a>
+                        <a href="#" class="flex-1 text-center py-2 px-4 rounded bg-violet-700 text-white hover:bg-violet-600 transition text-sm">Course Modules</a>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-l-4 border-l-violet-500">
+                    <h4 class="text-2xl font-bold text-white mb-2">Database</h4>
+                    <p class="text-slate-400 mb-4 text-sm">Fundamentals of syntax, array data structures, functions, and basic data processing.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Oracle</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Constraints</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Relationships</span> 
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Data Types</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="database.html" class="flex-1 text-center py-2 px-4 rounded border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white transition text-sm">Syllabus (RPS)</a>
+                        <a href="#" class="flex-1 text-center py-2 px-4 rounded bg-violet-700 text-white hover:bg-violet-600 transition text-sm">Course Modules</a>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-l-4 border-l-fuchsia-500">
+                    <h4 class="text-2xl font-bold text-white mb-2">Human and Computer Interactions</h4>
+                    <p class="text-slate-400 mb-4 text-sm">Development of AR-based applications using Unity and Vuforia for mobile devices.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">User Interfaces</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">User Experiences</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Lo Fidelity</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Hi Fidelity</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="hci.html" class="flex-1 text-center py-2 px-4 rounded border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white transition text-sm">Syllabus (RPS)</a>
+                        <a href="#" class="flex-1 text-center py-2 px-4 rounded bg-violet-700 text-white hover:bg-violet-600 transition text-sm">Course Modules</a>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-l-4 border-l-violet-500">
+                    <h4 class="text-2xl font-bold text-white mb-2">Extended Reality Design</h4>
+                    <p class="text-slate-400 mb-4 text-sm">Development of AR-based applications using Unity and Vuforia for mobile devices.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Unity 3D</span>
+                        <span class="px-2 py-1 text-xs text-indigo-300 bg-indigo-900/50 rounded">Vuforia</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="xrdesign.html" class="flex-1 text-center py-2 px-4 rounded border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white transition text-sm">Syllabus (RPS)</a>
+                        <a href="#" class="flex-1 text-center py-2 px-4 rounded bg-violet-700 text-white hover:bg-violet-600 transition text-sm">Course Modules</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-slate-900">
+        <div class="max-w-screen-xl px-4 mx-auto text-center">
+            <h2 class="mb-12 text-3xl font-bold tracking-tight text-white">Professional Certifications</h2>
+            
+            <div class="flex flex-wrap justify-center gap-8 items-center grayscale hover:grayscale-0 transition duration-500">
+                <div class="flex flex-col items-center group">
+                    <div class="w-24 h-24 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 group-hover:border-violet-500 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition">
+                        <span class="text-xs text-slate-500 font-bold">Unity</span>
+                    </div>
+                    <span class="mt-3 text-sm text-slate-400 font-medium">Unity VR Developer</span>
+                </div>
+                
+                <div class="flex flex-col items-center group">
+                    <div class="w-24 h-24 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 group-hover: group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition">
+                        <a href="https://www.credly.com/badges/3be97147-cb8e-47eb-b6bf-0e6f8f3ec0c0" target="_blank"><img src="https://images.credly.com/size/340x340/images/e25cb39f-b60b-494c-99a3-64a466577282/image.png" width="72"></a>
+                    </div>
+                    <span class="mt-3 text-sm text-slate-400 font-medium">Google Data Analyst</span>
+                </div>
+
+                <div class="flex flex-col items-center group">
+                    <div class="w-24 h-24 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 group-hover:border-cyan-500 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition">
+                        <a href="https://www.credly.com/badges/758afd67-2833-46be-8f4c-ad461e2bff86" target="_blank"><img src="https://images.credly.com/size/340x340/images/6c7c66d7-5777-4ce4-9916-197ab761bb69/image.png" width="72"></a>
+                    </div>
+                    <span class="mt-3 text-sm text-slate-400 font-medium">Google UI/UX Design</span>
+                </div>         
+            
+                <div class="flex flex-col items-center group">
+                    <div class="w-24 h-24 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 group-hover:border-violet-500 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition">
+                        <span class="text-xs text-slate-500 font-bold">Google</span>
+                    </div>
+                    <span class="mt-3 text-sm text-slate-400 font-medium">Google Certified Educator</span>
+                </div>
+                
+                <div class="flex flex-col items-center group">
+                    <div class="w-24 h-24 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 group-hover: group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition">
+                        <a href="https://www.credly.com/badges/d39cb466-546f-47b5-9255-9a0d0baf0db0" target="_blank"><img src="https://images.credly.com/size/340x340/images/54f7ea40-48bc-4217-b398-b81bae6de175/MCE.png" width="60"></a>
+                    </div>
+                    <span class="mt-3 text-sm text-slate-400 font-medium">Microsoft Certified Educator</span>
+                </div>
+
+                <div class="flex flex-col items-center group">
+                    <div class="w-24 h-24 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 group-hover:border-cyan-500 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition">
+                        <span class="text-xs text-slate-500 font-bold">MCP</span>
+                    </div>
+                    <span class="mt-3 text-sm text-slate-400 font-medium">Microsoft Cert. Professional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-indigo-950 border-t border-indigo-900">
+        <div class="max-w-screen-xl px-4 py-12 mx-auto md:flex md:items-center md:justify-between">
+            <div class="mb-6 md:mb-0">
+                <span class="self-center text-2xl font-bold whitespace-nowrap text-white">
+                    Let's <span class="text-fuchsia-400">Collaborate</span>
+                </span>
+                <p class="text-slate-400 mt-2 text-sm max-w-xs">
+                    Open for research collaboration, seminar speaking engagements, or AR/VR development projects.
+                </p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="mailto:paulus.lucky@machung.ac.id" target="_blank" class="text-white hover:text-fuchsia-400 transition">paulus.lucky@machung.ac.id</a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase">Links</h2>
+                    <ul class="text-slate-400 font-medium text-sm">
+                        <li class="mb-4"><a href="https://scholar.google.com/citations?user=JqmefJUAAAAJ&hl=en" target="_blank" class="hover:text-white transition">Google Scholar</a></li>
+                        <li class="mb-4"><a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6153959" target="_blank" class="hover:text-white transition">Sinta ID</a></li>
+                        <li class="mb-4"><a href="https://orcid.org/0000-0002-2907-6223" target="_blank" class="hover:text-white transition">ORCID</a></li>
+                        <li><a href="https://www.linkedin.com/in/lockeyirawan/" target="_blank" class="hover:text-white transition">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-6 bg-black/20 text-slate-500 text-sm">
+            © 2026 Paulus Lucky Tirma Irawan
+        </div>
+    </footer>
+
+</body>
+</html>
