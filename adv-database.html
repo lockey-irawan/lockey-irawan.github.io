@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus & Modules | Database Design</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        indigo: { 950: '#1e1b4b' },
+                        violet: { 500: '#8b5cf6' },
+                        fuchsia: { 400: '#e879f9' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(30, 27, 75, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+        /* Custom scrollbar for table overflowing */
+        ::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e1b4b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8b5cf6; 
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 antialiased min-h-screen bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-900">
+
+    <nav class="fixed top-4 left-4 z-50">
+        <a href="index.html#teaching" class="flex items-center gap-2 px-4 py-2 bg-slate-900/80 backdrop-blur-md border border-indigo-500/30 rounded-full text-slate-300 hover:text-white hover:border-fuchsia-400 transition group">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover:-translate-x-1 transition">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            <span class="text-sm font-medium">Back to Home</span>
+        </a>
+    </nav>
+
+    <header class="pt-24 pb-12 px-4">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-violet-600 blur-[100px] opacity-20"></div>
+
+                <span class="inline-block mb-4 py-1 px-3 rounded-full bg-violet-900/50 text-violet-300 text-sm font-semibold border border-violet-800">
+                    Even Semester 2025/2026
+                </span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
+                        Database Design
+                    </span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-3xl leading-relaxed">
+                    This course provides a comprehensive exploration of database systems, progressing from conceptual design to practical implementation using Oracle technologies. Students will master data modeling techniques, including Entity Relationship Diagrams (ERDs) and normalization, before transitioning to relational database management with Oracle Application Express (APEX). The curriculum covers essential SQL skills, ranging from basic data retrieval and sorting to advanced table joins, aggregate functions, and set operations. Finally, students will learn to ensure data integrity and optimize access through the implementation of constraints and database views.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="pb-24 px-4">
+        <div class="max-w-screen-xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg class="w-6 h-6 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                Learning Timeline (16 Sessions)
+            </h2>
+
+            <div class="glass-card rounded-xl overflow-hidden border border-indigo-500/30">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-slate-300">
+                        <thead class="text-xs uppercase bg-indigo-950/80 text-indigo-300 border-b border-indigo-800">
+                            <tr>
+                                <th scope="col" class="px-6 py-4 font-bold w-32">Session / Week</th>
+                                <th scope="col" class="px-6 py-4 font-bold">Topic Discussion</th>
+                                <th scope="col" class="px-6 py-4 font-bold w-64 text-center">Action / Module</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-indigo-900/50">
+                            
+                            <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#1</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Fundamentals of Database Modeling</div>
+                                    <span class="text-sm text-slate-400">This session introduces the core principles of database design, distinguishing between conceptual and physical data models. Students will learn to identify key database components—including instances, entities, attributes, and identifiers—and apply these concepts to construct basic Entity Relationship Diagrams (ERDs) representing real-world data structures.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 1
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#2</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Advanced Diagramming and Relationship Analysis</div>
+                                    <span class="text-sm text-slate-400">This week deepens the understanding of data associations by focusing on identifying relationships and mastering standard ER diagramming conventions. Students will practice "Speaking ERDish" to articulate data structures verbally, utilize matrix diagrams for relationship analysis, and learn technical drawing standards to represent complex data connections accurately.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 2
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#3</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Complex Relationships and Data Operations</div>
+                                    <span class="text-sm text-slate-400">This session addresses the nuances of data connectivity, including relationship transferability and classifying relationship types. Students will learn the critical technique of resolving many-to-many relationships into associative entities and analyze CRUD (Create, Read, Update, Delete) requirements to ensure the data model supports necessary business operations.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 3
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#4</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Modeling Historical Data and Layout Standards</div>
+                                    <span class="text-sm text-slate-400">This week focuses on temporal aspects of database design, specifically techniques for modeling historical data and tracking changes in time or price over time. Additionally, the session emphasizes drawing conventions and layout strategies that enhance the readability and clarity of complex Entity Relationship Diagrams.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 4
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#5</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Relational Concepts and Mapping Transformation</div>
+                                    <span class="text-sm text-slate-400">Bridging the gap between design and implementation, this session introduces fundamental relational database concepts. Students will master the transformation process by learning how to map conceptual ER models, relationships, and subtypes into physical relational table structures (schemas).</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 5
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#6 - 7</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Introduction to SQL and Oracle Application Express</div>
+                                    <span class="text-sm text-slate-400">These weeks introduce the practical technical environment using Oracle Application Express (APEX) and Relational Database Technology. Students will dissect the anatomy of Structured Query Language (SQL) statements, learning the syntax and structure required to interact directly with the database system.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 6
+                                    </a>
+                                </td>
+
+                            <tr class="bg-fuchsia-900/20 border-y-2 border-fuchsia-500/50 hover:bg-fuchsia-900/30 transition relative">
+                                <td class="px-6 py-6 font-bold text-fuchsia-300 text-lg">#8</td>
+                                <td class="px-6 py-6">
+                                    <div class="flex items-center gap-3">
+                                        <span class="flex h-3 w-3 relative">
+                                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                                            <span class="relative inline-flex rounded-full h-3 w-3 bg-fuchsia-500"></span>
+                                        </span>
+                                        <div class="font-bold text-white text-xl uppercase tracking-wider">Midterm Exam (UTS)</div>
+                                    </div>
+                                    <span class="text-sm text-slate-300 mt-2 block pl-6">Evaluation of material from sessions 1 to 7. Format: Live Coding / Mini Project.</span>
+                                </td>
+                                <td class="px-6 py-6 text-center">
+                                    <span class="px-3 py-1 text-xs font-semibold text-fuchsia-300 bg-fuchsia-950 border border-fuchsia-500 rounded-full">Mandatory Attendance</span>
+                                </td>
+                            </tr>
+
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#9</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Logic, Sorting, and Single-Row Functions</div>
+                                    <span class="text-sm text-slate-400">This session advances SQL querying skills by exploring logical comparisons and understanding operator precedence rules. Students will learn methods for sorting retrieved data rows and get an introduction to using database functions to manipulate data items.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 7
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#10</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Advanced Data Retrieval with Joins</div>
+                                    <span class="text-sm text-slate-400">This week focuses on querying data from multiple tables simultaneously using various Join techniques. Topics include Cross, Natural, Inner, and Outer Joins, as well as Self-Joins for recursive relationships and Hierarchical Queries to navigate tree-structured data within tables.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 8
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#11 - 12</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Aggregate Functions and Null Handling</div>
+                                    <span class="text-sm text-slate-400">These sessions concentrate on multi-row processing using Group Functions to aggregate data. Students will master specific functions like COUNT and DISTINCT for statistical summaries and learn essential techniques for handling null values using functions like NVL to ensure data accuracy in reports.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 9
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#13 - 14</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Advanced Grouping and Set Operations</div>
+                                    <span class="text-sm text-slate-400">These weeks cover sophisticated reporting techniques using GROUP BY and HAVING clauses to filter aggregated data. Students will explore advanced analytical operations like ROLLUP, CUBE, and GROUPING SETS for multi-dimensional analysis, as well as Set Operators (such as UNION and INTERSECT) to combine results from multiple queries.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 10
+                                    </a>
+                                </td>
+                            </tr>
+                             <tr class="bg-slate-900/40 hover:bg-indigo-900/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">#15</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-white mb-1">Database Integrity Constraints and Views</div>
+                                    <span class="text-sm text-slate-400">The final instructional week focuses on data integrity and security. Students will implement various constraints (NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK) to enforce business rules. Additionally, the session covers the creation and management of Database Views to simplify complex queries and restrict data access.</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                        Download Module 11
+                                    </a>
+                                </td>
+                            </tr>
+
+                             <tr class="bg-indigo-900/40 border-t-2 border-indigo-500/50 hover:bg-indigo-900/60 transition relative">
+                                <td class="px-6 py-6 font-bold text-indigo-300 text-lg">#16</td>
+                                <td class="px-6 py-6">
+                                    <div class="flex items-center gap-3">
+                                        <span class="flex h-3 w-3 relative">
+                                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                                            <span class="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
+                                        </span>
+                                        <div class="font-bold text-white text-xl uppercase tracking-wider">Final Exam (UAS)</div>
+                                    </div>
+                                    <span class="text-sm text-slate-300 mt-2 block pl-6">Evaluation of material from sessions 9 to 15. Schedule according to university regulations.</span>
+                                </td>
+                                <td class="px-6 py-6 text-center">
+                                    <span class="px-3 py-1 text-xs font-semibold text-indigo-300 bg-indigo-950 border border-indigo-500 rounded-full">Final Project / Exam</span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-sm text-slate-400 bg-indigo-950/30 p-4 rounded-lg border border-indigo-900/50 flex items-start gap-3">
+                <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <p>Note: The timeline and topics are subject to change according to class dynamics and university policies. Always check the latest announcements in the class group or university e-learning platform.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-slate-500 text-sm border-t border-indigo-900/50">
+        © 2026 Your Name. Ma Chung University.
+    </footer>
+
+</body>
+</html>
